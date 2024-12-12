@@ -1,28 +1,14 @@
-package com.skillspire.goldgym.models;
+package com.skillspire.goldgym.dtos;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Table(name="gym")
-@Entity
-public class Gym {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class GymDto {
     private Long id;
     private String address;
     private String managerName;
 
-    public Gym() {
+    public GymDto() {
     }
 
-    public Gym(Long id, String address, String managerName) {
+    public GymDto(Long id, String address, String managerName) {
         this.id = id;
         this.address = address;
         this.managerName = managerName;
